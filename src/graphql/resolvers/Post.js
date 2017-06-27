@@ -9,7 +9,7 @@ const PostsController = {
 
         index: ( args ) => {
 
-        const URL = `https://www.reddit.com/r/${ args.subreddit || 'javascript' }.json`;
+        const URL = `https://www.reddit.com/r/javascript.json`;
 
 return axios.get( URL )
         .then( (response) => {
