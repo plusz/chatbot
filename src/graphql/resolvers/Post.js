@@ -9,25 +9,25 @@ const PostsController = {
 
         index: ( args ) => {
 
-        const URL = `https://www.reddit.com/r/javascript.json`;
+		//const URL = `https://www.franklintempleton.com/en-us-retail/investor/products/mutual-funds/index.page?bid=us.ppss`;
+        const URL = `http://orpi.pl/download/ppsstest.json`;
 
-return axios.get( URL )
-        .then( (response) => {
-        const __posts = [];
-const posts = response.data.data.children;
+		return axios.get( URL )
+			.then( (response) => {
+				const __posts = [];
+				const posts = response.productsVO.data.ppsList;
 
-posts.map( post => {
-    post.data.content = post.data.selftext_html;
-__posts.push( post.data );
-} );
-return __posts;
-})
-.catch( (error) => {
-    return { error: error }
-});
+            posts.map( post => {
+                post.data.content = post.fundLegalName.val;
+            __posts.push( post.data );
+            });
+            return __posts;
+        })
+        .catch( (error) => {
+            return { error: error }
+        });
 
-}
-
+    }
 
 }
 

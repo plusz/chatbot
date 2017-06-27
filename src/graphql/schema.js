@@ -1,6 +1,3 @@
-/**
- * Created by porzechowski on 27/06/2017.
- */
 'use strict';
 
 const GraphQL = require('graphql');
