@@ -24,33 +24,33 @@ const PostType = new GraphQL.GraphQLObjectType({
         description: 'Post Type, For all the posts present in Reddit.',
 
         fields: () => ({
-        fund: {
+        fundNumber: {
+                type: dataType,
+                val: {
+                    type: GraphQLString
+                }
+        },
+        cusip: {
             type: dataType,
             val: {
                 type: GraphQLString
             }
         },
-        fundShortName: {
+        assetClass: {
             type: dataType,
             val: {
-                type: GraphQLString,
-                description: 'Title of the post'
+                type: GraphQLString
             }
         },
-        fundObjective: {
-            type: GraphQLString
-        },
-        inception_dt: {
+        fundLegalName: {
             type: dataType,
             val: {
-                type: GraphQLString,
-                description: 'Name of the Author who created this post'
+                type: GraphQLString
             }
         },
-
         content: {
             type: GraphQLString,
-            description: 'Markdown content of the post'
+            description: 'Markdown content of the post',
         }
 
     })

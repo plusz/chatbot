@@ -2,8 +2,6 @@
  * Created by porzechowski on 27/06/2017.
  */
 
-'use strict';
-
 const app = require('./src/app');
 
 // let's set the port on which the server will run
