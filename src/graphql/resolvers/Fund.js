@@ -5,23 +5,22 @@
 
 const axios = require('axios');
 
-const PostsController = {
+const FundsController = {
 
         index: ( args ) => {
 
 		const URL = `https://www.franklintempleton.com/en-us-retail/investor/products/mutual-funds/index.page?bid=us.ppss`;
-        //const URL = `http://orpi.pl/download/ppsstest.json`;
 
 		return axios.get( URL )
 			.then( (response) => {
-				const __posts = [];
-                const posts = response.data.productsVO.ppsList;
+				const __funds = [];
+                const funds = response.data.productsVO.ppsList;
 
-            posts.map( post => {
-                post.content = post.fundObjective;
-            __posts.push( post );
+                funds.map( fund => {
+                fund.content = fund.fundObjective;
+            __funds.push( fund );
             });
-            return __posts;
+            return __funds;
         })
         .catch( (error) => {
             return { error: error}
@@ -31,4 +30,4 @@ const PostsController = {
 
 }
 
-module.exports = PostsController;
+module.exports = FundsController;

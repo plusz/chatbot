@@ -8,7 +8,7 @@ const {
 
 
 // import the user query file we created
-const PostQuery = require('./queries/Post');
+const FundQuery = require('./queries/Fund');
 
 
 // lets define our root query
@@ -16,7 +16,7 @@ const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     description: 'This is the default root query provided by our application',
     fields: {
-        posts: PostQuery.index(),
+        funds: FundQuery.index(),
     },
 });
 

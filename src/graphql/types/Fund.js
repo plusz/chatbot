@@ -19,9 +19,9 @@ var dataType = new GraphQL.GraphQLObjectType({
     }
 });
 
-const PostType = new GraphQL.GraphQLObjectType({
-        name: 'Post',
-        description: 'Post Type, For all the posts present in Reddit.',
+const FundType = new GraphQL.GraphQLObjectType({
+        name: 'Fund',
+        description: 'Fund Type, For all the funds present in PPSS.',
 
         fields: () => ({
         fundNumber: {
@@ -50,7 +50,7 @@ const PostType = new GraphQL.GraphQLObjectType({
         },
         content: {
             type: GraphQLString,
-            description: 'Markdown content of the post',
+            description: 'Markdown content of the fund',
         }
 
     })
@@ -59,4 +59,4 @@ const PostType = new GraphQL.GraphQLObjectType({
 ;
 
 
-module.exports = PostType;
+module.exports = FundType;

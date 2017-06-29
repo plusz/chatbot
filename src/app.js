@@ -20,7 +20,7 @@ app.use(
     '/',
     expressGraphQL( () => {
         return {
-            graphiql: true,
+            graphiql: false,
             schema: GraphQLSchema,
         }
     })
