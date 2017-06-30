@@ -17,8 +17,11 @@ const FundsController = {
                 const funds = response.data.productsVO.ppsList;
 
                 funds.map( fund => {
-                fund.content = fund.fundObjective;
-            __funds.push( fund );
+                    fund.content = fund.fundObjective;
+                if (fund.fundNumber.val===args.fundnumber || !args.fundnumber)
+                {
+                    __funds.push( fund );
+                }
             });
             return __funds;
         })
