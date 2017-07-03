@@ -25,9 +25,13 @@ module.exports = {
             type: new GraphQLList(FundType),
             description: 'This will return all the funds we find in the given fundnumber.',
             args: {
-                fundnumber: {
+                fundNumber: {
                     type: GraphQLString,
                     description: 'Please enter fundnumber name',
+                },
+                assetClass: {
+                    type: GraphQLString,
+                    description: 'Please enter assetClass name',
                 }
             },
             resolve(parent, args, context, info) {

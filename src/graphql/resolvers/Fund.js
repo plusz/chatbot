@@ -18,7 +18,11 @@ const FundsController = {
 
                 funds.map( fund => {
                     fund.content = fund.fundObjective;
-                if (fund.fundNumber.val===args.fundnumber || !args.fundnumber)
+                if (
+                    (fund.fundNumber.val===args.fundNumber || !args.fundNumber)
+                    &&
+                    (fund.assetClass.val===args.assetClass || !args.assetClass)
+                   )
                 {
                     __funds.push( fund );
                 }
