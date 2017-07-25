@@ -9,3 +9,4 @@ npm install -g node-inspector
 Then run:
 
 node-debug app.js
+nodemon server.js
