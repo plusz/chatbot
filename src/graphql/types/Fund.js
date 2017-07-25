@@ -30,6 +30,15 @@ const FundType = new GraphQL.GraphQLObjectType({
                     type: GraphQLString
                 }
         },
+        nav: {
+                type: dataType
+        },
+        navChng: {
+            type: dataType,
+            val: {
+                type: GraphQLString
+            }
+        },
         cusip: {
             type: dataType,
             val: {
