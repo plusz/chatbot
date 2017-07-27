@@ -15,54 +15,62 @@ const {
 var dataType = new GraphQL.GraphQLObjectType({
     name: 'FttData',
     fields: {
-        val: { type: GraphQLString }
+        val: {type: GraphQLString}
     }
 });
 
 const FundType = new GraphQL.GraphQLObjectType({
-        name: 'Fund',
-        description: 'Fund Type, For all the funds present in PPSS.',
+    name: 'Fund',
+    description: 'Fund Type, For all the funds present in PPSS.',
 
-        fields: () => ({
-        fundNumber: {
-                type: dataType,
-                val: {
-                    type: GraphQLString
-                }
-        },
-        nav: {
-                type: dataType
-        },
-        navChng: {
-            type: dataType,
-            val: {
-                type: GraphQLString
-            }
-        },
-        cusip: {
-            type: dataType,
-            val: {
-                type: GraphQLString
-            }
-        },
-        assetClass: {
-            type: dataType,
-            val: {
-                type: GraphQLString
-            }
-        },
-        fundLegalName: {
-            type: dataType,
-            val: {
-                type: GraphQLString
-            }
-        },
-        content: {
-            type: GraphQLString,
-            description: 'Markdown content of the fund',
+    fields: ()=> ({
+    fundNumber: {
+        type: dataType,
+        val: {
+            type: GraphQLString
         }
+    },
+    nav: {
+        type: dataType
+    },
+    navChng: {
+        type: dataType,
+        val: {
+            type: GraphQLString
+        }
+    },
+    cusip: {
+        type: dataType,
+        val: {
+            type: GraphQLString
+        }
+    },
+    assetClass: {
+        type: dataType,
+        val: {
+            type: GraphQLString
+        }
+    },
+    fundLegalName: {
+        type: dataType,
+        val: {
+            type: GraphQLString
+        }
+    },
+    prntFundCategory: {
+        type: dataType,
+        val: {
+            type: GraphQLString
+        }
+    },
+    shareClass: {
+        type: dataType,
+        val: {
+            type: GraphQLString
+        }
+    }
 
-    })
+})
 
 })
 ;

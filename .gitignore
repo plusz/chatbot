@@ -67,3 +67,4 @@ typings/
 .idea/modules.xml
 .idea/workspace.xml
 package.json
+/nbproject/private/

@@ -27,11 +27,15 @@ module.exports = {
             args: {
                 fundNumber: {
                     type: GraphQLString,
-                    description: 'Please enter fundnumber name',
+                    description: 'Please enter fundnumber name'
                 },
                 assetClass: {
                     type: GraphQLString,
-                    description: 'Please enter assetClass name',
+                    description: 'Please enter assetClass name'
+                },
+                prntFundCategory: {
+                    type: GraphQLString,
+                    description: 'Please enter assetClass name'
                 }
             },
             resolve(parent, args, context, info) {
